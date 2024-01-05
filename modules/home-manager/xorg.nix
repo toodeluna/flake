@@ -9,6 +9,11 @@ in
       default = 144;
     };
 
+    wallpaper = mkOption {
+      type = types.path;
+      default = ../../wallpapers/violet-evergarden.png;
+    };
+
     monitors = mkOption {
       default = [ ];
       type = types.listOf (types.submodule {
@@ -54,10 +59,9 @@ in
       in
       ''
         exec xrdb -merge ~/.Xresources &
-
         ${strings.concatStringsSep " & " xrandr-commands} &
-
         exec compfy &
+        exec feh --bg-fill ${config.wallpaper} &
         exec xmonad
       '';
   };

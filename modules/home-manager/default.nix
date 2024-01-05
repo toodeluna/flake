@@ -17,4 +17,5 @@
   programs.neovim.enable = true;
   programs.rofi.enable = true;
   programs.fish.enable = true;
+  programs.feh.enable = true;
 }
