@@ -64,12 +64,4 @@
     work-sans
     (nerdfonts.override { fonts = [ "FiraCode" ]; })
   ];
-
-  environment.systemPackages = with pkgs; [
-    git
-    neovim
-    alacritty
-    firefox
-    rofi
-  ];
 }
