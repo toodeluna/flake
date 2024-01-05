@@ -5,6 +5,7 @@
     ./git.nix
     ./picom.nix
     ./xorg.nix
+    ./xmonad
   ];
 
   home.sessionVariables = {
