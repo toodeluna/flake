@@ -21,6 +21,8 @@ in
     programs.fish.enable = true;
     users.defaultUserShell = pkgs.fish;
 
+    services.gvfs.enable = true;
+
     boot.loader = {
       systemd-boot.enable = true;
       efi.canTouchEfiVariables = true;

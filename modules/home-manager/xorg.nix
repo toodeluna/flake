@@ -60,6 +60,7 @@ in
       ''
         exec xrdb -merge ~/.Xresources &
         ${strings.concatStringsSep " & " xrandr-commands} &
+	exec udiskie &
         exec compfy &
         exec feh --bg-fill ${config.wallpaper} &
         exec xmonad

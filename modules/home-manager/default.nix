@@ -14,6 +14,11 @@
     BROWSER = "firefox";
   };
 
+  home.packages = with pkgs; [
+    pcmanfm
+    udiskie
+  ];
+
   programs.home-manager.enable = true;
   programs.firefox.enable = true;
   programs.alacritty.enable = true;
