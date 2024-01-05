@@ -6,6 +6,7 @@ in
   imports = [
     ./git.nix
     ./picom.nix
+    ./xorg.nix
   ];
 
   options = {
