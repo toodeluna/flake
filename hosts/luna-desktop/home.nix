@@ -1,24 +1,12 @@
 { ... }:
 {
-  home.username = "luna";
-  home.homeDirectory = "/home/luna";
+  imports = [ ../../modules/home-manager ];
+
   home.stateVersion = "23.05";
-  home.sessionVariables = {
-    EDITOR = "nvim";
-  };
 
-  programs.home-manager.enable = true;
-  programs.firefox.enable = true;
-  programs.alacritty.enable = true;
-  programs.neovim.enable = true;
-  programs.rofi.enable = true;
-
-  programs.git = {
-    enable = true;
-    userName = "Luna Heyman";
-    userEmail = "luna.heyman@proton.me";
-    extraConfig = {
-      init.defaultBranch = "main";
-    };
+  profile = {
+    username = "luna";
+    fullName = "Luna Heyman";
+    email = "luna.heyman@proton.me";
   };
 }
