@@ -58,12 +58,12 @@ in
         xrandr-commands = map (monitor: "exec xrandr --output ${monitor.name} ${if monitor.primary then "--primary" else ""} ${if !(isNull monitor.location) then "--${monitor.location.position} ${monitor.location.name}" else ""}") config.monitors;
       in
       ''
-        exec xrdb -merge ~/.Xresources &
-        ${strings.concatStringsSep " & " xrandr-commands} &
-	exec udiskie &
-        exec compfy &
-        exec feh --bg-fill ${config.wallpaper} &
-        exec xmonad
+                exec xrdb -merge ~/.Xresources &
+                ${strings.concatStringsSep " & " xrandr-commands} &
+        	exec udiskie &
+                exec compfy &
+                exec feh --bg-fill ${config.wallpaper} &
+                exec xmonad
       '';
   };
 }

@@ -1,13 +1,17 @@
-{ pkgs, ... }:
+{ pkgs, nix-colors, ... }:
 {
   imports = [
+    nix-colors.homeManagerModules.default
     ./profile.nix
     ./git.nix
     ./picom.nix
     ./xorg.nix
     ./fish.nix
+    ./alacritty.nix
     ./xmonad
   ];
+
+  colorScheme = nix-colors.colorSchemes.monokai;
 
   home.sessionVariables = {
     EDITOR = "nvim";
@@ -21,7 +25,6 @@
 
   programs.home-manager.enable = true;
   programs.firefox.enable = true;
-  programs.alacritty.enable = true;
   programs.neovim.enable = true;
   programs.rofi.enable = true;
   programs.feh.enable = true;
