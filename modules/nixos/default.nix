@@ -18,6 +18,9 @@ in
     sound.enable = true;
     security.sudo.extraConfig = "Defaults env_reset,pwfeedback";
 
+    programs.fish.enable = true;
+    users.defaultUserShell = pkgs.fish;
+
     boot.loader = {
       systemd-boot.enable = true;
       efi.canTouchEfiVariables = true;
