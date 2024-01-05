@@ -1,9 +1,12 @@
-{ lib, config, ... }:
+{ pkgs, lib, config, ... }:
 let
   inherit (lib) mkOption types;
 in
 {
-  imports = [ ./git.nix ];
+  imports = [
+    ./git.nix
+    ./picom.nix
+  ];
 
   options = {
     profile = mkOption {
