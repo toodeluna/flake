@@ -15,7 +15,8 @@ main = xmonad . ewmh . ewmhFullscreen . docks $ myConfig `additionalKeysP` myKey
 myConfig = def
   { modMask = mod4Mask,
     terminal = myTerminal,
-    layoutHook = myLayout
+    layoutHook = myLayout,
+    startupHook = spawn "xsetroot -cursor_name left_ptr"
   }
 
 myLayout = avoidStruts (tiled ||| full)

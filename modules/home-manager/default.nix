@@ -8,6 +8,8 @@
     ./xorg.nix
     ./fish.nix
     ./alacritty.nix
+    ./gtk.nix
+    ./lsd.nix
     ./xmonad
   ];
 
@@ -19,6 +21,7 @@
   };
 
   home.packages = with pkgs; [
+    dconf
     pcmanfm
     udiskie
   ];
@@ -28,6 +31,5 @@
   programs.neovim.enable = true;
   programs.rofi.enable = true;
   programs.feh.enable = true;
-  programs.lsd.enable = true;
   programs.bat.enable = true;
 }
