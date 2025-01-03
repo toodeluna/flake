@@ -1,0 +1,10 @@
+excludes = [".git/*", ".git/**/*", "*.gif", "*.toml", "flake.lock"]
+
+[formatter.nixfmt]
+command = "nixfmt"
+includes = ["*.nix"]
+
+[formatter.deno]
+command = "deno"
+options = ["fmt"]
+includes = ["*.md"]
